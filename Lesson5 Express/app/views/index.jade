@@ -1,0 +1,21 @@
+html
+  head
+    title= title
+    link(href='/css/materialize.min.css' , rel='stylesheet')
+  body
+    .container
+      h1= title
+      h2= message
+      if isLoggedIn
+        h3 You're Loggin
+        form(name='logout' , method='post' ,action='logout')
+          .input-field col s12
+            input(type='submit' , value='Logout')
+      else
+        form(name='login' , method='post' ,action='login')
+          .input-field col s12
+            input(type='text' , name='username' ,placeholder='username')
+          .input-field col s12
+            input(type='password' , name='password' ,placeholder='password')
+          .input-field col s12
+            input(type='submit' , value='Login')
