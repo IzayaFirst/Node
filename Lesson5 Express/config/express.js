@@ -1,8 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');// Parse HTML BODY
 module.exports = function(){
-
-
   var app = express();
     app.set('views' , './app/views');
     app.set('view engine' , 'jade');
